@@ -3,19 +3,19 @@
 import { useDrag } from "react-dnd";
 export const DraggableField = ({ field }) => {
     const [{ isDragging }, drag] = useDrag({
-        type: 'FORM_FIELD',   // This tells react-dnd that this item is of type 'FORM_FIELD'
-        item: { field },      // The data being dragged, i.e., the field info
+        type: 'FORM_FIELD',   
+        item: { field },      
         collect: (monitor) => ({
-            isDragging: monitor.isDragging(), // Tracks whether the field is being dragged
+            isDragging: monitor.isDragging(),
         }),
     });
 
     return (
         <div
-            ref={drag} // The drag ref makes the element draggable
+            ref={drag} 
             className={`p-2 border ${isDragging ? 'opacity-50' : 'opacity-100'}`}
         >
-            {field.label} {/* Display the field label */}
+            {field.label} 
         </div>
     );
 };
