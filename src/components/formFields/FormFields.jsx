@@ -1,4 +1,4 @@
-import { DraggableField } from "../dragAndDrop/DraggableField";
+import {DraggableField} from '../dragAndDrop/DraggableField'
 export const FormFields = () => {
 
     const fields = [
@@ -10,19 +10,18 @@ export const FormFields = () => {
         { id: 6, type: 'number', label: 'Decimal' },
         { id: 7, type: 'date', label: 'Date' },
         { id: 8, type: 'time', label: 'Time' },
-        { id: 9, type: 'checkbox', label: 'Checkbox' },
-        { id: 10, type: 'radio', label: 'Radio' }
+        { id: 9, type: 'checkbox', label: 'Checkbox', options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'] },
+        { id: 10, type: 'radio', label: 'Radio', options: ['Option A', 'Option B', 'Option C', 'Option D'] }
     ];
 
     return (
         <div className="bg-gray-200 p-6 min-h-screen">
-        <h1 className="text-xl font-semibold mb-4">Form Fields</h1>
-        <div className="grid grid-cols-1 gap-4">
-            {fields.map((field) => (
-                <DraggableField key={field.id} field={field} />
-            ))}
+            <h1 className="text-xl font-semibold mb-4">Form Fields</h1>
+            <div className="grid grid-cols-1 gap-4">
+                {fields.map((field) => (
+                    <DraggableField key={field.id} field={field} />
+                ))}
+            </div>
         </div>
-    </div>
     );
 };
-
