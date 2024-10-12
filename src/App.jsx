@@ -1,5 +1,4 @@
 
-import './App.css'
 import { Forms } from './components/form/Forms'
 import { FormFields } from './components/formFields/FormFields'
 import { DndProvider } from 'react-dnd';
